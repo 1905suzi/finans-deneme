@@ -1768,3 +1768,151 @@ html, body {
     align-items: center;
     gap: 6px;
 }
+
+
+/* ============================================================
+   ORANTILI YENİ YAN YANA (2 KOLONLU) LANDING DÜZENİ
+   SOLDA DİKEY GİRİŞ KARTI | SAĞDA BİLGİLENDİRME & KARTLAR
+   ============================================================ */
+#landing {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 24px;
+    position: relative;
+    z-index: 10;
+}
+
+.landing-hero-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 36px;
+    align-items: center;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* SOL ALAN: DİKEY GİRİŞ KARTI */
+.landing-left-column {
+    width: 100%;
+}
+
+.landing-auth-vertical-card {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(5, 150, 105, 0.3);
+    border-radius: 26px;
+    padding: 26px 22px;
+    box-shadow: 0 16px 40px -10px rgba(2, 132, 199, 0.16), 0 8px 24px -6px rgba(5, 150, 105, 0.12);
+}
+
+.auth-vertical-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.auth-mini-emblem {
+    width: 48px;
+    height: 48px;
+    background: #ecfdf5;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(5, 150, 105, 0.25);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
+}
+
+.auth-brand-name {
+    font-size: 21px;
+    font-weight: 900;
+    color: var(--text-main);
+    line-height: 1.1;
+}
+
+.auth-brand-name span {
+    background: linear-gradient(135deg, var(--primary), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.auth-brand-tagline {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* SAĞ ALAN: BİLGİLENDİRME & KARTLAR */
+.landing-right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.showcase-horizontal-split {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.showcase-advisor-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showcase-grid-compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.compact-card {
+    padding: 16px 18px !important;
+    border-radius: 18px !important;
+}
+
+.compact-card .showcase-card-icon {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+    border-radius: 12px !important;
+}
+
+.compact-card h3 {
+    font-size: 14.5px !important;
+    margin-bottom: 4px !important;
+}
+
+.compact-card p {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+}
+
+@media (max-width: 1024px) {
+    .landing-hero-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .landing-left-column {
+        max-width: 440px;
+        margin: 0 auto;
+    }
+    .showcase-horizontal-split {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .showcase-grid-compact {
+        grid-template-columns: 1fr;
+    }
+}

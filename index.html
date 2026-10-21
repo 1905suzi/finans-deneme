@@ -31,197 +31,204 @@
             <span class="flag-tr-text">TR</span>
         </div>
 
-        <div class="landing-showcase-container">
-            <!-- 1. ÜST BAŞLIK VE VİTRİN -->
-            <div class="showcase-header">
-                <div class="showcase-badge">
-                    <span class="pulse-dot"></span> 2026 GELECEK NESİL FİNANS & YATIRIM PLATFORMU
-                </div>
-                <h1 class="showcase-title">Finans<span>+</span> ile Finansal Özgürlüğünü İnşa Et</h1>
-                <p class="showcase-subtitle">Oyunlaştırılmış Seviye Yolları • Borsa & Temettü Laboratuvarı • Bütçe & Bileşik Getiri Simülatörü • 1v1 Finans Düelloları</p>
-            </div>
-
-            <!-- 2. ORTA ALAN: SOLDA AMBLEM & DANIŞMAN, SAĞDA 4 BİLGİLENDİRME KARTI -->
-            <div class="showcase-stage">
-                <!-- Sol Kolon: Finansal Amblem & Konuşma Balonu -->
-                <div class="showcase-visual-side">
-                    <div class="showcase-speech-bubble">
-                        <div class="speech-header">Finans+ <span>Piyasa Danışmanı</span></div>
-                        <p>Finans+'a hoş geldin! Paran için çalışmayı bırak, paranın senin için çalışmasını öğren 📈</p>
-                    </div>
-
-                    <!-- FİNANS ALANINA ÖZEL 3D ALTIN KALKAN & YÜKSELEN BORSA GRAFİĞİ SVG -->
-                    <div class="finance-emblem-wrap">
-                        <svg width="220" height="230" viewBox="0 0 220 230" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#047857"/>
-                                    <stop offset="50%" stop-color="#065f46"/>
-                                    <stop offset="100%" stop-color="#064e3b"/>
-                                </linearGradient>
-                                <linearGradient id="goldRimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#fef08a"/>
-                                    <stop offset="50%" stop-color="#f59e0b"/>
-                                    <stop offset="100%" stop-color="#b45309"/>
-                                </linearGradient>
-                                <linearGradient id="greenCandleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="0%" stop-color="#34d399"/>
-                                    <stop offset="100%" stop-color="#059669"/>
-                                </linearGradient>
-                                <linearGradient id="goldCoinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#fef08a"/>
-                                    <stop offset="50%" stop-color="#eab308"/>
-                                    <stop offset="100%" stop-color="#a16207"/>
-                                </linearGradient>
-                            </defs>
-
-                            <!-- Zemin Gölgesi -->
-                            <ellipse cx="110" cy="216" rx="60" ry="9" fill="rgba(0,0,0,0.12)"/>
-
-                            <!-- Dış Güvenlik Kalkanı -->
-                            <path d="M 110 18 L 180 50 C 180 135, 110 185, 110 200 C 110 185, 40 135, 40 50 Z" 
-                                  fill="url(#shieldGrad)" stroke="url(#goldRimGrad)" stroke-width="4"/>
-
-                            <!-- Kalkan İçi Parlak Çerçeve -->
-                            <path d="M 110 28 L 170 56 C 170 128, 110 172, 110 186 C 110 172, 50 128, 50 56 Z" 
-                                  fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.8"/>
-
-                            <!-- Borsa Yükseliş Mum Çubukları -->
-                            <line x1="72" y1="95" x2="72" y2="135" stroke="#34d399" stroke-width="2"/>
-                            <rect x="66" y="105" width="12" height="22" rx="3" fill="url(#greenCandleGrad)"/>
-
-                            <line x1="96" y1="80" x2="96" y2="130" stroke="#34d399" stroke-width="2"/>
-                            <rect x="90" y="90" width="12" height="30" rx="3" fill="url(#greenCandleGrad)"/>
-
-                            <line x1="120" y1="65" x2="120" y2="125" stroke="#34d399" stroke-width="2"/>
-                            <rect x="114" y="75" width="12" height="40" rx="3" fill="url(#greenCandleGrad)"/>
-
-                            <line x1="144" y1="50" x2="144" y2="115" stroke="#fbbf24" stroke-width="2"/>
-                            <rect x="138" y="58" width="12" height="46" rx="3" fill="url(#goldCoinGrad)"/>
-
-                            <!-- Yükselen Borsa Trend Çizgisi -->
-                            <path d="M 64 125 Q 105 105 152 52" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-                            <polygon points="152,44 158,58 144,55" fill="#ffffff"/>
-
-                            <!-- Ön Planda Parlayan Altın Finans Sikkesi -->
-                            <g transform="translate(110, 145)">
-                                <circle cx="0" cy="0" r="24" fill="url(#goldCoinGrad)" stroke="#fef08a" stroke-width="2.5"/>
-                                <circle cx="0" cy="0" r="19" fill="none" stroke="rgba(161, 98, 7, 0.4)" stroke-width="1.5" stroke-dasharray="3 3"/>
-                                <path d="M -5 -11 L -5 11 M -5 -3 L 7 -3 M -5 3 L 5 3 M -5 -11 Q 7 -11 7 -1 Q 7 8 -5 9" 
-                                      fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Sağ Kolon: 4 Süper Finans Gücü -->
-                <div class="showcase-grid">
-                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
-                        <div class="showcase-card-icon icon-green"><i class="fa-solid fa-map-location-dot"></i></div>
-                        <h3>İnteraktif Finans Haritası</h3>
-                        <p>5 farklı finans alanında sıfırdan zirveye adım adım interaktif seviye ilerleme yolu.</p>
-                    </div>
-                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
-                        <div class="showcase-card-icon icon-gold"><i class="fa-solid fa-calculator"></i></div>
-                        <h3>Finans Laboratuvarı</h3>
-                        <p>Bileşik getiri, 50/30/20 bütçe dağıtımı ve enflasyon alım gücü simülatörleri.</p>
-                    </div>
-                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
-                        <div class="showcase-card-icon icon-cyan"><i class="fa-solid fa-bolt"></i></div>
-                        <h3>1v1 Bilgi Düelloları</h3>
-                        <p>Finansal terimler, borsa ve ekonomi sorularıyla canlı finans yarışması.</p>
-                    </div>
-                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
-                        <div class="showcase-card-icon icon-purple"><i class="fa-solid fa-book-bookmark"></i></div>
-                        <h3>Dijital Finans Ansiklopedisi</h3>
-                        <p>A'dan Z'ye borsa sözlüğü, F/K, PD/DD, temettü rehberi ve kanıtlanmış portföy modelleri.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. DOĞRUDAN SAYFADA GÖRÜNÜR GİRİŞ & KAYIT OL PANELİ -->
-            <div class="landing-auth-panel-wrapper">
-                <div class="landing-auth-card">
-                    <div class="auth-card-header">
-                        <div class="auth-card-title">
-                            <i class="fa-solid fa-arrow-right-to-bracket" style="color: var(--primary);"></i>
-                            <span>Platforma Giriş Yap / Kayıt Ol</span>
+        <div class="landing-hero-layout">
+            <!-- SOL ALAN: DİKEY GİRİŞ & KAYIT PANELİ -->
+            <div class="landing-left-column">
+                <div class="landing-auth-vertical-card">
+                    <!-- Üst Logo / Başlık & Mini Amblem -->
+                    <div class="auth-vertical-brand">
+                        <div class="auth-mini-emblem">
+                            <svg width="44" height="46" viewBox="0 0 220 230" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="miniShield" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#047857"/>
+                                        <stop offset="100%" stop-color="#064e3b"/>
+                                    </linearGradient>
+                                    <linearGradient id="miniGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#fef08a"/>
+                                        <stop offset="100%" stop-color="#b45309"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 110 18 L 180 50 C 180 135, 110 185, 110 200 C 110 185, 40 135, 40 50 Z" 
+                                      fill="url(#miniShield)" stroke="url(#miniGold)" stroke-width="6"/>
+                                <path d="M 64 125 Q 105 105 152 52" fill="none" stroke="#34d399" stroke-width="7" stroke-linecap="round"/>
+                            </svg>
                         </div>
-                        <div class="auth-tabs-row">
-                            <button type="button" class="auth-tab-btn active" id="tab-btn-login" onclick="switchLandingAuthTab('login')">
-                                <i class="fa-solid fa-right-to-bracket"></i> Giriş Yap
-                            </button>
-                            <button type="button" class="auth-tab-btn" id="tab-btn-register" onclick="switchLandingAuthTab('register')">
-                                <i class="fa-solid fa-user-plus"></i> Kayıt Ol
-                            </button>
+                        <div>
+                            <div class="auth-brand-name">Finans<span>+</span> 2026</div>
+                            <div class="auth-brand-tagline">Finansal Geleceğini Yönet</div>
                         </div>
                     </div>
 
-                    <!-- Giriş Formu -->
+                    <!-- Giriş Yap / Kayıt Ol Sekmeleri -->
+                    <div class="auth-tabs-row" style="width: 100%; margin: 16px 0 18px 0;">
+                        <button type="button" class="auth-tab-btn active" id="tab-btn-login" onclick="switchLandingAuthTab('login')">
+                            <i class="fa-solid fa-right-to-bracket"></i> Giriş Yap
+                        </button>
+                        <button type="button" class="auth-tab-btn" id="tab-btn-register" onclick="switchLandingAuthTab('register')">
+                            <i class="fa-solid fa-user-plus"></i> Kayıt Ol
+                        </button>
+                    </div>
+
+                    <!-- Giriş Formu (Dikey) -->
                     <form id="landing-login-form" onsubmit="handleLandingLogin(event)">
-                        <div class="auth-inputs-row">
-                            <div class="form-group-item">
-                                <label><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
-                                <div class="input-with-icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <input type="email" id="landing-login-email" class="auth-text-field" placeholder="deniz@finansplus.com" value="deniz@finansplus.com" required />
-                                </div>
-                            </div>
-                            <div class="form-group-item">
-                                <label><i class="fa-solid fa-lock"></i> Hesap Şifresi</label>
-                                <div class="input-with-icon">
-                                    <i class="fa-solid fa-lock"></i>
-                                    <input type="password" id="landing-login-pass" class="auth-text-field" placeholder="••••••••" value="finans2026password" required />
-                                </div>
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="landing-login-email" class="auth-text-field" placeholder="deniz@finansplus.com" value="deniz@finansplus.com" required />
                             </div>
                         </div>
-                        <div class="auth-actions-row">
-                            <button type="submit" class="btn-primary" style="padding: 14px 34px; font-size: 15.5px; border-radius: 14px;">
-                                <i class="fa-solid fa-rocket"></i> Giriş Yap ve Başla
-                            </button>
-                            <button type="button" class="btn-outline" style="padding: 14px 26px; font-size: 15px; border-radius: 14px;" onclick="enterPlatform()">
-                                <i class="fa-solid fa-compass"></i> Misafir Olarak Keşfet
-                            </button>
+
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-lock"></i> Hesap Şifresi</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="landing-login-pass" class="auth-text-field" placeholder="••••••••" value="finans2026password" required />
+                            </div>
                         </div>
-                        <div class="auth-demo-hint">
-                            <i class="fa-solid fa-circle-info"></i> Hazır test hesabı: <strong>deniz@finansplus.com</strong> / Şifre: <strong>finans2026password</strong>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; padding: 13px; font-size: 15px; border-radius: 14px; margin-top: 6px;">
+                            <i class="fa-solid fa-rocket"></i> Giriş Yap ve Başla
+                        </button>
+
+                        <button type="button" class="btn-outline" style="width: 100%; padding: 12px; font-size: 14px; border-radius: 14px; margin-top: 10px;" onclick="enterPlatform()">
+                            <i class="fa-solid fa-compass"></i> Misafir Olarak Keşfet
+                        </button>
+
+                        <div class="auth-demo-hint" style="font-size: 11.5px; margin-top: 14px; line-height: 1.4;">
+                            <i class="fa-solid fa-circle-info"></i> Test Hesabı: <strong>deniz@finansplus.com</strong><br>Şifre: <strong>finans2026password</strong>
                         </div>
                     </form>
 
-                    <!-- Kayıt Ol Formu -->
+                    <!-- Kayıt Ol Formu (Dikey) -->
                     <form id="landing-register-form" style="display: none;" onsubmit="handleLandingRegister(event)">
-                        <div class="auth-inputs-row auth-inputs-row-3">
-                            <div class="form-group-item">
-                                <label><i class="fa-solid fa-user"></i> Ad Soyad</label>
-                                <div class="input-with-icon">
-                                    <i class="fa-solid fa-user"></i>
-                                    <input type="text" id="landing-register-name" class="auth-text-field" placeholder="Deniz Yılmaz" required />
-                                </div>
-                            </div>
-                            <div class="form-group-item">
-                                <label><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
-                                <div class="input-with-icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <input type="email" id="landing-register-email" class="auth-text-field" placeholder="adiniz@finans.com" required />
-                                </div>
-                            </div>
-                            <div class="form-group-item">
-                                <label><i class="fa-solid fa-lock"></i> Şifre Belirle</label>
-                                <div class="input-with-icon">
-                                    <i class="fa-solid fa-lock"></i>
-                                    <input type="password" id="landing-register-pass" class="auth-text-field" placeholder="En az 4 karakter" required />
-                                </div>
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-user"></i> Ad Soyad</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="landing-register-name" class="auth-text-field" placeholder="Adınız Soyadınız" required />
                             </div>
                         </div>
-                        <div class="auth-actions-row">
-                            <button type="submit" class="btn-primary" style="padding: 14px 34px; font-size: 15.5px; border-radius: 14px;">
-                                <i class="fa-solid fa-user-plus"></i> Hesabımı Oluştur ve Başla
-                            </button>
-                            <button type="button" class="btn-outline" style="padding: 14px 26px; font-size: 15px; border-radius: 14px;" onclick="enterPlatform()">
-                                <i class="fa-solid fa-compass"></i> Misafir Olarak Keşfet
-                            </button>
+
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="landing-register-email" class="auth-text-field" placeholder="ornek@finans.com" required />
+                            </div>
                         </div>
+
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-lock"></i> Şifre Belirle</label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="landing-register-pass" class="auth-text-field" placeholder="En az 4 karakter" required />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; padding: 13px; font-size: 15px; border-radius: 14px; margin-top: 6px;">
+                            <i class="fa-solid fa-user-plus"></i> Hesabımı Oluştur ve Başla
+                        </button>
+
+                        <button type="button" class="btn-outline" style="width: 100%; padding: 12px; font-size: 14px; border-radius: 14px; margin-top: 10px;" onclick="enterPlatform()">
+                            <i class="fa-solid fa-compass"></i> Misafir Olarak Keşfet
+                        </button>
                     </form>
+                </div>
+            </div>
+
+            <!-- SAĞ ALAN: BİLGİLENDİRME, DANIŞMAN, AMBLEM VE 4 ÖZELLİK KARTI -->
+            <div class="landing-right-column">
+                <!-- Başlık ve Rozet -->
+                <div class="showcase-header" style="text-align: left; margin-bottom: 20px;">
+                    <div class="showcase-badge" style="margin-bottom: 10px;">
+                        <span class="pulse-dot"></span> 2026 GELECEK NESİL FİNANS & YATIRIM PLATFORMU
+                    </div>
+                    <h1 class="showcase-title" style="font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 8px;">Finans<span>+</span> ile Finansal Özgürlüğünü İnşa Et</h1>
+                    <p class="showcase-subtitle" style="margin: 0; font-size: 14.5px;">Oyunlaştırılmış Seviye Yolları • Borsa & Temettü Laboratuvarı • Bütçe & Bileşik Getiri Simülatörü • 1v1 Finans Düelloları</p>
+                </div>
+
+                <!-- Danışman Balonu + 3D Altın Kalkan Amblemi ve 4 Kart Grid -->
+                <div class="showcase-horizontal-split">
+                    <!-- Danışman & Amblem Kolonu -->
+                    <div class="showcase-advisor-strip">
+                        <div class="showcase-speech-bubble" style="max-width: 100%; margin-bottom: 10px;">
+                            <div class="speech-header">Finans+ <span>Piyasa Danışmanı</span></div>
+                            <p>Finans+'a hoş geldin! Paran için çalışmayı bırak, paranın senin için çalışmasını öğren 📈</p>
+                        </div>
+
+                        <!-- 3D Kalkan Amblemi -->
+                        <div class="finance-emblem-wrap" style="display: flex; justify-content: center;">
+                            <svg width="190" height="200" viewBox="0 0 220 230" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#047857"/>
+                                        <stop offset="50%" stop-color="#065f46"/>
+                                        <stop offset="100%" stop-color="#064e3b"/>
+                                    </linearGradient>
+                                    <linearGradient id="goldRimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#fef08a"/>
+                                        <stop offset="50%" stop-color="#f59e0b"/>
+                                        <stop offset="100%" stop-color="#b45309"/>
+                                    </linearGradient>
+                                    <linearGradient id="greenCandleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#34d399"/>
+                                        <stop offset="100%" stop-color="#059669"/>
+                                    </linearGradient>
+                                    <linearGradient id="goldCoinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#fef08a"/>
+                                        <stop offset="50%" stop-color="#eab308"/>
+                                        <stop offset="100%" stop-color="#a16207"/>
+                                    </linearGradient>
+                                </defs>
+                                <ellipse cx="110" cy="216" rx="60" ry="9" fill="rgba(0,0,0,0.12)"/>
+                                <path d="M 110 18 L 180 50 C 180 135, 110 185, 110 200 C 110 185, 40 135, 40 50 Z" 
+                                      fill="url(#shieldGrad)" stroke="url(#goldRimGrad)" stroke-width="4"/>
+                                <path d="M 110 28 L 170 56 C 170 128, 110 172, 110 186 C 110 172, 50 128, 50 56 Z" 
+                                      fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.8"/>
+                                <line x1="72" y1="95" x2="72" y2="135" stroke="#34d399" stroke-width="2"/>
+                                <rect x="66" y="105" width="12" height="22" rx="3" fill="url(#greenCandleGrad)"/>
+                                <line x1="96" y1="80" x2="96" y2="130" stroke="#34d399" stroke-width="2"/>
+                                <rect x="90" y="90" width="12" height="30" rx="3" fill="url(#greenCandleGrad)"/>
+                                <line x1="120" y1="65" x2="120" y2="125" stroke="#34d399" stroke-width="2"/>
+                                <rect x="114" y="75" width="12" height="40" rx="3" fill="url(#greenCandleGrad)"/>
+                                <line x1="144" y1="50" x2="144" y2="115" stroke="#fbbf24" stroke-width="2"/>
+                                <rect x="138" y="58" width="12" height="46" rx="3" fill="url(#goldCoinGrad)"/>
+                                <path d="M 64 125 Q 105 105 152 52" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                <polygon points="152,44 158,58 144,55" fill="#ffffff"/>
+                                <g transform="translate(110, 145)">
+                                    <circle cx="0" cy="0" r="24" fill="url(#goldCoinGrad)" stroke="#fef08a" stroke-width="2.5"/>
+                                    <path d="M -5 -11 L -5 11 M -5 -3 L 7 -3 M -5 3 L 5 3 M -5 -11 Q 7 -11 7 -1 Q 7 8 -5 9" 
+                                          fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 4 Süper Finans Gücü 2x2 Grid -->
+                    <div class="showcase-grid-compact">
+                        <div class="showcase-card compact-card" onclick="document.getElementById('landing-login-email').focus()">
+                            <div class="showcase-card-icon icon-green"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h3>İnteraktif Finans Haritası</h3>
+                            <p>5 farklı alanda sıfırdan zirveye interaktif seviye ilerleme yolu.</p>
+                        </div>
+                        <div class="showcase-card compact-card" onclick="document.getElementById('landing-login-email').focus()">
+                            <div class="showcase-card-icon icon-gold"><i class="fa-solid fa-calculator"></i></div>
+                            <h3>Finans Laboratuvarı</h3>
+                            <p>Bileşik getiri, 50/30/20 bütçe ve enflasyon simülatörleri.</p>
+                        </div>
+                        <div class="showcase-card compact-card" onclick="document.getElementById('landing-login-email').focus()">
+                            <div class="showcase-card-icon icon-cyan"><i class="fa-solid fa-bolt"></i></div>
+                            <h3>1v1 Bilgi Düelloları</h3>
+                            <p>Finansal terimler, borsa ve ekonomi sorularıyla canlı yarışma.</p>
+                        </div>
+                        <div class="showcase-card compact-card" onclick="document.getElementById('landing-login-email').focus()">
+                            <div class="showcase-card-icon icon-purple"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <h3>Dijital Finans Ansiklopedisi</h3>
+                            <p>A'dan Z'ye borsa sözlüğü, F/K, PD/DD, temettü rehberi ve modeller.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
