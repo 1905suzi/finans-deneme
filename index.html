@@ -30,7 +30,9 @@
             <img src="assets/turkish-flag.png" alt="Türk Bayrağı" class="waving-flag-img" />
             <span class="flag-tr-text">TR</span>
         </div>
-        <div id="landing-showcase-view" class="landing-showcase-container">
+
+        <div class="landing-showcase-container">
+            <!-- 1. ÜST BAŞLIK VE VİTRİN -->
             <div class="showcase-header">
                 <div class="showcase-badge">
                     <span class="pulse-dot"></span> 2026 GELECEK NESİL FİNANS & YATIRIM PLATFORMU
@@ -39,6 +41,7 @@
                 <p class="showcase-subtitle">Oyunlaştırılmış Seviye Yolları • Borsa & Temettü Laboratuvarı • Bütçe & Bileşik Getiri Simülatörü • 1v1 Finans Düelloları</p>
             </div>
 
+            <!-- 2. ORTA ALAN: SOLDA AMBLEM & DANIŞMAN, SAĞDA 4 BİLGİLENDİRME KARTI -->
             <div class="showcase-stage">
                 <!-- Sol Kolon: Finansal Amblem & Konuşma Balonu -->
                 <div class="showcase-visual-side">
@@ -75,7 +78,7 @@
                             <!-- Zemin Gölgesi -->
                             <ellipse cx="110" cy="216" rx="60" ry="9" fill="rgba(0,0,0,0.12)"/>
 
-                            <!-- Dış Güvenlik Kalkanı (Altın Çerçeveli Zümrüt Kalkan) -->
+                            <!-- Dış Güvenlik Kalkanı -->
                             <path d="M 110 18 L 180 50 C 180 135, 110 185, 110 200 C 110 185, 40 135, 40 50 Z" 
                                   fill="url(#shieldGrad)" stroke="url(#goldRimGrad)" stroke-width="4"/>
 
@@ -83,7 +86,7 @@
                             <path d="M 110 28 L 170 56 C 170 128, 110 172, 110 186 C 110 172, 50 128, 50 56 Z" 
                                   fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.8"/>
 
-                            <!-- Borsa Yükseliş Mum Çubukları (Candlesticks) -->
+                            <!-- Borsa Yükseliş Mum Çubukları -->
                             <line x1="72" y1="95" x2="72" y2="135" stroke="#34d399" stroke-width="2"/>
                             <rect x="66" y="105" width="12" height="22" rx="3" fill="url(#greenCandleGrad)"/>
 
@@ -113,22 +116,22 @@
 
                 <!-- Sağ Kolon: 4 Süper Finans Gücü -->
                 <div class="showcase-grid">
-                    <div class="showcase-card" onclick="enterPlatform()">
+                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
                         <div class="showcase-card-icon icon-green"><i class="fa-solid fa-map-location-dot"></i></div>
                         <h3>İnteraktif Finans Haritası</h3>
                         <p>5 farklı finans alanında sıfırdan zirveye adım adım interaktif seviye ilerleme yolu.</p>
                     </div>
-                    <div class="showcase-card" onclick="enterPlatform()">
+                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
                         <div class="showcase-card-icon icon-gold"><i class="fa-solid fa-calculator"></i></div>
                         <h3>Finans Laboratuvarı</h3>
                         <p>Bileşik getiri, 50/30/20 bütçe dağıtımı ve enflasyon alım gücü simülatörleri.</p>
                     </div>
-                    <div class="showcase-card" onclick="enterPlatform()">
+                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
                         <div class="showcase-card-icon icon-cyan"><i class="fa-solid fa-bolt"></i></div>
                         <h3>1v1 Bilgi Düelloları</h3>
                         <p>Finansal terimler, borsa ve ekonomi sorularıyla canlı finans yarışması.</p>
                     </div>
-                    <div class="showcase-card" onclick="enterPlatform()">
+                    <div class="showcase-card" onclick="document.getElementById('landing-login-email').focus()">
                         <div class="showcase-card-icon icon-purple"><i class="fa-solid fa-book-bookmark"></i></div>
                         <h3>Dijital Finans Ansiklopedisi</h3>
                         <p>A'dan Z'ye borsa sözlüğü, F/K, PD/DD, temettü rehberi ve kanıtlanmış portföy modelleri.</p>
@@ -136,125 +139,89 @@
                 </div>
             </div>
 
-            <!-- Başlama & Giriş Butonları -->
-            <div class="showcase-actions">
-                <button type="button" class="btn-primary" style="padding: 16px 36px; font-size: 16.5px;" onclick="openAuthView(event)">
-                    <i class="fa-solid fa-right-to-bracket"></i> Giriş Yap / Kayıt Ol (Hemen Başla)
-                </button>
-                <button type="button" class="btn-outline" style="padding: 16px 28px; font-size: 16px;" onclick="enterPlatform()">
-                    <i class="fa-solid fa-compass"></i> Misafir Olarak Keşfet
-                </button>
-            </div>
-
-            <!-- Ekrana Tıklama İpucu Bildirimi -->
-            <div class="showcase-click-hint" onclick="openAuthView(event)" style="cursor: pointer; text-align: center; margin-top: 18px; color: var(--text-muted); font-size: 13.5px;">
-                <i class="fa-regular fa-hand-pointer pulse-icon"></i> Ekrana veya herhangi bir alana tıklayarak doğrudan Giriş Yap / Kayıt Ol paneline geçebilirsiniz
-            </div>
-        </div>
-
-        <!-- 2. DOĞRUDAN GİRİŞ & KAYIT OL PANELİ GÖRÜNÜMÜ (AUTH VIEW) -->
-        <div id="landing-auth-view" class="landing-auth-container" style="display: none;">
-            <div class="landing-auth-left">
-                <div class="landing-auth-brand-title">Finans<span>+</span> 2026</div>
-                <div class="landing-auth-brand-sub">Geleceğin Finansal Lideri Ol. Paran Senin İçin Çalışsın.</div>
-                
-                <!-- Finans Amblemi -->
-                <div class="finance-emblem-wrap">
-                    <svg width="220" height="230" viewBox="0 0 220 230" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="110" cy="216" rx="60" ry="9" fill="rgba(0,0,0,0.12)"/>
-                        <path d="M 110 18 L 180 50 C 180 135, 110 185, 110 200 C 110 185, 40 135, 40 50 Z" 
-                              fill="url(#shieldGrad)" stroke="url(#goldRimGrad)" stroke-width="4"/>
-                        <path d="M 110 28 L 170 56 C 170 128, 110 172, 110 186 C 110 172, 50 128, 50 56 Z" 
-                              fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.8"/>
-                        <line x1="72" y1="95" x2="72" y2="135" stroke="#34d399" stroke-width="2"/>
-                        <rect x="66" y="105" width="12" height="22" rx="3" fill="url(#greenCandleGrad)"/>
-                        <line x1="96" y1="80" x2="96" y2="130" stroke="#34d399" stroke-width="2"/>
-                        <rect x="90" y="90" width="12" height="30" rx="3" fill="url(#greenCandleGrad)"/>
-                        <line x1="120" y1="65" x2="120" y2="125" stroke="#34d399" stroke-width="2"/>
-                        <rect x="114" y="75" width="12" height="40" rx="3" fill="url(#greenCandleGrad)"/>
-                        <line x1="144" y1="50" x2="144" y2="115" stroke="#fbbf24" stroke-width="2"/>
-                        <rect x="138" y="58" width="12" height="46" rx="3" fill="url(#goldCoinGrad)"/>
-                        <path d="M 64 125 Q 105 105 152 52" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-                        <polygon points="152,44 158,58 144,55" fill="#ffffff"/>
-                        <g transform="translate(110, 145)">
-                            <circle cx="0" cy="0" r="24" fill="url(#goldCoinGrad)" stroke="#fef08a" stroke-width="2.5"/>
-                            <path d="M -5 -11 L -5 11 M -5 -3 L 7 -3 M -5 3 L 5 3 M -5 -11 Q 7 -11 7 -1 Q 7 8 -5 9" 
-                                  fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="landing-auth-right">
-                <button type="button" class="btn-back-to-showcase" onclick="openShowcaseView()" style="background: none; border: none; color: var(--cyan); font-weight: 700; font-size: 13.5px; cursor: pointer; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-arrow-left"></i> Platform Tanıtımını & Özellikleri Gör
-                </button>
-
-                <div class="auth-tabs-row">
-                    <button type="button" class="auth-tab-btn active" id="tab-btn-login" onclick="switchLandingAuthTab('login')">
-                        <i class="fa-solid fa-right-to-bracket"></i> Giriş Yap
-                    </button>
-                    <button type="button" class="auth-tab-btn" id="tab-btn-register" onclick="switchLandingAuthTab('register')">
-                        <i class="fa-solid fa-user-plus"></i> Kayıt Ol
-                    </button>
-                </div>
-
-                <!-- Giriş Formu -->
-                <form id="landing-login-form" onsubmit="handleLandingLogin(event)">
-                    <div class="form-group-item">
-                        <label>E-posta Adresi</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="landing-login-email" class="auth-text-field" placeholder="deniz@finansplus.com" value="deniz@finansplus.com" required />
+            <!-- 3. DOĞRUDAN SAYFADA GÖRÜNÜR GİRİŞ & KAYIT OL PANELİ -->
+            <div class="landing-auth-panel-wrapper">
+                <div class="landing-auth-card">
+                    <div class="auth-card-header">
+                        <div class="auth-card-title">
+                            <i class="fa-solid fa-arrow-right-to-bracket" style="color: var(--primary);"></i>
+                            <span>Platforma Giriş Yap / Kayıt Ol</span>
+                        </div>
+                        <div class="auth-tabs-row">
+                            <button type="button" class="auth-tab-btn active" id="tab-btn-login" onclick="switchLandingAuthTab('login')">
+                                <i class="fa-solid fa-right-to-bracket"></i> Giriş Yap
+                            </button>
+                            <button type="button" class="auth-tab-btn" id="tab-btn-register" onclick="switchLandingAuthTab('register')">
+                                <i class="fa-solid fa-user-plus"></i> Kayıt Ol
+                            </button>
                         </div>
                     </div>
-                    <div class="form-group-item">
-                        <label>Hesap Şifresi</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="landing-login-pass" class="auth-text-field" placeholder="••••••••" value="finans2026password" required />
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width: 100%; padding: 14px; font-size: 15.5px; border-radius: 14px; margin-top: 8px;">
-                        <span>Giriş Yap</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                    <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 10px;">Varsayılan: deniz@finansplus.com / finans2026password</p>
-                </form>
 
-                <!-- Kayıt Ol Formu -->
-                <form id="landing-register-form" style="display: none;" onsubmit="handleLandingRegister(event)">
-                    <div class="form-group-item">
-                        <label>Ad Soyad / Kullanıcı Adı</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="landing-register-name" class="auth-text-field" placeholder="Deniz Yılmaz" required />
+                    <!-- Giriş Formu -->
+                    <form id="landing-login-form" onsubmit="handleLandingLogin(event)">
+                        <div class="auth-inputs-row">
+                            <div class="form-group-item">
+                                <label><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" id="landing-login-email" class="auth-text-field" placeholder="deniz@finansplus.com" value="deniz@finansplus.com" required />
+                                </div>
+                            </div>
+                            <div class="form-group-item">
+                                <label><i class="fa-solid fa-lock"></i> Hesap Şifresi</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" id="landing-login-pass" class="auth-text-field" placeholder="••••••••" value="finans2026password" required />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group-item">
-                        <label>E-posta Adresi</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="landing-register-email" class="auth-text-field" placeholder="adiniz@finans.com" required />
+                        <div class="auth-actions-row">
+                            <button type="submit" class="btn-primary" style="padding: 14px 34px; font-size: 15.5px; border-radius: 14px;">
+                                <i class="fa-solid fa-rocket"></i> Giriş Yap ve Başla
+                            </button>
+                            <button type="button" class="btn-outline" style="padding: 14px 26px; font-size: 15px; border-radius: 14px;" onclick="enterPlatform()">
+                                <i class="fa-solid fa-compass"></i> Misafir Olarak Keşfet
+                            </button>
                         </div>
-                    </div>
-                    <div class="form-group-item">
-                        <label>Güçlü Şifre Oluştur</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="landing-register-pass" class="auth-text-field" placeholder="En az 6 karakter" required />
+                        <div class="auth-demo-hint">
+                            <i class="fa-solid fa-circle-info"></i> Hazır test hesabı: <strong>deniz@finansplus.com</strong> / Şifre: <strong>finans2026password</strong>
                         </div>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width: 100%; padding: 14px; font-size: 15.5px; border-radius: 14px; margin-top: 8px;">
-                        <span>Hesap Oluştur ve Başla</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </form>
+                    </form>
 
-                <div style="text-align: center; margin-top: 18px; border-top: 1px solid var(--border-color); padding-top: 14px;">
-                    <button type="button" onclick="enterPlatform()" style="background: none; border: none; color: var(--text-muted); font-size: 13px; font-weight: 700; cursor: pointer;">
-                        <i class="fa-solid fa-bolt"></i> Misafir Olarak Hızlıca İncele
-                    </button>
+                    <!-- Kayıt Ol Formu -->
+                    <form id="landing-register-form" style="display: none;" onsubmit="handleLandingRegister(event)">
+                        <div class="auth-inputs-row auth-inputs-row-3">
+                            <div class="form-group-item">
+                                <label><i class="fa-solid fa-user"></i> Ad Soyad</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" id="landing-register-name" class="auth-text-field" placeholder="Deniz Yılmaz" required />
+                                </div>
+                            </div>
+                            <div class="form-group-item">
+                                <label><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" id="landing-register-email" class="auth-text-field" placeholder="adiniz@finans.com" required />
+                                </div>
+                            </div>
+                            <div class="form-group-item">
+                                <label><i class="fa-solid fa-lock"></i> Şifre Belirle</label>
+                                <div class="input-with-icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" id="landing-register-pass" class="auth-text-field" placeholder="En az 4 karakter" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auth-actions-row">
+                            <button type="submit" class="btn-primary" style="padding: 14px 34px; font-size: 15.5px; border-radius: 14px;">
+                                <i class="fa-solid fa-user-plus"></i> Hesabımı Oluştur ve Başla
+                            </button>
+                            <button type="button" class="btn-outline" style="padding: 14px 26px; font-size: 15px; border-radius: 14px;" onclick="enterPlatform()">
+                                <i class="fa-solid fa-compass"></i> Misafir Olarak Keşfet
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

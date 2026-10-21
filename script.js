@@ -25,7 +25,7 @@ let userProfile = {
     username: 'deniz_finans',
     email: 'deniz@finansplus.com',
     password: 'finans2026password',
-    isLoggedIn: true,
+    isLoggedIn: false,
     riskProfile: 'Dengeli Büyüme',
     levelTitle: 'Bilinçli Tasarrufçu',
     completedLessons: 0,
@@ -51,7 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Oturum Kontrolü
 function checkAuthSession() {
-    if (userProfile.isLoggedIn) {
+    const sessionActive = sessionStorage.getItem('finans_session_active');
+    if (sessionActive === 'true' && userProfile.isLoggedIn) {
         document.getElementById('landing').classList.add('hidden');
         document.getElementById('app-container').classList.remove('hidden');
     } else {
@@ -778,12 +779,12 @@ function submitPasswordChange() {
 
 function logoutUser() {
     if (!confirm('Hesabınızdan çıkış yapmak istediğinize emin misiniz?')) return;
+    sessionStorage.removeItem('finans_session_active');
     userProfile.isLoggedIn = false;
     saveProfileToStorage();
     closeModal('profile-modal');
     document.getElementById('app-container').classList.add('hidden');
     document.getElementById('landing').classList.remove('hidden');
-    openShowcaseView();
     showToast('Başarıyla çıkış yapıldı.', 'info');
 }
 
@@ -1002,27 +1003,18 @@ function handleLandingLogin(event) {
         return;
     }
 
-    if (email === userProfile.email && pass === userProfile.password) {
-        userProfile.isLoggedIn = true;
-        saveProfileToStorage();
-        document.getElementById('landing').classList.add('hidden');
-        document.getElementById('app-container').classList.remove('hidden');
-        renderRoadmap();
-        showToast(`Tekrar hoş geldiniz, ${userProfile.name}! 📈`, 'success');
-    } else if (email && pass.length >= 4) {
+    sessionStorage.setItem('finans_session_active', 'true');
+    userProfile.isLoggedIn = true;
+    if (email !== userProfile.email) {
         userProfile.email = email;
         userProfile.username = email.split('@')[0] || 'finans_kullanici';
         userProfile.name = userProfile.username.charAt(0).toUpperCase() + userProfile.username.slice(1);
-        userProfile.password = pass;
-        userProfile.isLoggedIn = true;
-        saveProfileToStorage();
-        document.getElementById('landing').classList.add('hidden');
-        document.getElementById('app-container').classList.remove('hidden');
-        renderRoadmap();
-        showToast(`Giriş başarılı! Hoş geldiniz, ${userProfile.name}! 🚀`, 'success');
-    } else {
-        showToast('E-posta veya şifre hatalı! (Varsayılan: deniz@finansplus.com / finans2026password)', 'danger');
     }
+    saveProfileToStorage();
+    document.getElementById('landing').classList.add('hidden');
+    document.getElementById('app-container').classList.remove('hidden');
+    renderRoadmap();
+    showToast(`Tekrar hoş geldiniz, ${userProfile.name}! 📈`, 'success');
 }
 
 function handleLandingRegister(event) {
@@ -1054,10 +1046,11 @@ function handleLandingRegister(event) {
 }
 
 function enterPlatform() {
+    sessionStorage.setItem('finans_session_active', 'true');
     userProfile.isLoggedIn = true;
     saveProfileToStorage();
     document.getElementById('landing').classList.add('hidden');
     document.getElementById('app-container').classList.remove('hidden');
     renderRoadmap();
-    showToast(`Finans+ Platformuna Hoş Geldiniz! 🚀`, 'success');
+    showToast('Finans+ Platformuna Hoş Geldiniz! 🚀', 'success');
 }
